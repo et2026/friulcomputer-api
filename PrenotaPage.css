@@ -1,0 +1,100 @@
+.prenota-page .page-title { font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+.prenota-page .page-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.5; }
+.form-section-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.slots-count { font-weight: 400; color: var(--green); text-transform: none; letter-spacing: 0; }
+.form-textarea { resize: none; }
+
+/* Servizi chip */
+.service-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.service-chip {
+  padding: 8px 14px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 13px; font-family: var(--font-sans);
+  color: var(--text-secondary);
+  display: flex; align-items: center; gap: 6px;
+  transition: all 0.12s; cursor: pointer;
+}
+.service-chip.active { background: var(--text-primary); color: var(--bg-primary); border-color: var(--text-primary); font-weight: 500; }
+.service-chip:hover:not(.active) { border-color: var(--border-hover); color: var(--text-primary); }
+.chip-duration { font-size: 11px; opacity: 0.65; font-family: var(--font-mono); }
+
+/* Loading */
+.loading-row {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: var(--text-muted); padding: 8px 0;
+}
+.spinner {
+  width: 16px; height: 16px;
+  border: 2px solid var(--border);
+  border-top-color: var(--text-secondary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.slots-hint { font-size: 13px; color: var(--text-muted); padding: 4px 0; }
+
+/* Slot grid */
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin-bottom: 10px;
+}
+.slot-btn {
+  padding: 9px 4px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px; color: var(--text-secondary);
+  font-family: var(--font-mono);
+  position: relative;
+  transition: all 0.12s; cursor: pointer;
+}
+.slot-btn:not(:disabled):hover { border-color: var(--border-hover); color: var(--text-primary); }
+.slot-btn.slot-selected { background: var(--text-primary); color: var(--bg-primary); border-color: var(--text-primary); font-weight: 600; }
+.slot-btn.slot-busy { opacity: 0.3; cursor: not-allowed; }
+.slot-x { position: absolute; top: 2px; right: 4px; font-size: 9px; opacity: 0.6; }
+
+.slots-legend { display: flex; gap: 14px; }
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-muted); }
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.dot-free { background: var(--bg-input); border: 1px solid var(--border); }
+.dot-selected { background: var(--text-primary); }
+.dot-busy { background: var(--bg-input); opacity: 0.3; border: 1px solid var(--border); }
+
+/* Error */
+.error-box {
+  display: flex; align-items: flex-start; gap: 8px;
+  background: var(--red-dim); border-radius: var(--radius-md);
+  padding: 11px 13px;
+  font-size: 13px; color: var(--red); line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Confirm */
+.confirm-box {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-xl); padding: 28px 20px;
+  text-align: center; margin-top: 20px;
+}
+.confirm-icon {
+  width: 56px; height: 56px; background: var(--green-dim);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px; color: var(--green);
+}
+.confirm-title { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+.confirm-body { font-size: 14px; color: var(--text-secondary); margin-bottom: 18px; line-height: 1.55; }
+.confirm-detail {
+  display: flex; flex-direction: column; gap: 4px;
+  background: var(--bg-input); border-radius: var(--radius-md);
+  padding: 12px 14px; margin-bottom: 20px;
+  font-size: 13px; color: var(--text-secondary); font-family: var(--font-mono);
+}
